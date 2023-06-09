@@ -13,11 +13,6 @@ void setup() {
 }
 
 void loop() {
-  int potentiometer = analogRead(A0);
-  int potent = potentiometer / 4;
-
-  analogWrite(10, potent);
-  analogWrite(11, potent);
 
   while (Serial.available()) 
   {
@@ -40,18 +35,6 @@ void loop() {
     }
   }
 }
-
-//Code for PIR SENSOR
-// if (digitalRead(3) == LOW)
-// {
-//   //Serial.println("STOP");
-//   stop();
-// }
-// else
-// {
-//   moveForward();
-// }
-
 
 void moveForward() {
   digitalWrite(7, LOW);
